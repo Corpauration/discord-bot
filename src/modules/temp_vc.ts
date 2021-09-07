@@ -48,7 +48,7 @@ function create_new_vc(new_state: VoiceState, trigger: string, channel_prefix: s
       type: 'GUILD_VOICE',
       parent: (new_state.channel!.parent || undefined)
     }).then(vc => {
-      utils.log_to_console("Creating channel " + new_state.channel!.name);
+      utils.log_to_console("Creating channel " + channel_name);
       new_state.setChannel(vc);
     });
   }
