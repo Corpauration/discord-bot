@@ -12,13 +12,12 @@ This bot can do a few things :
 Step 1 : clone the git repository `git@github.com:Corpauration/discord-bot.git` <br>
 Step 2 : move to the corresponding directory : `cd discord-bot` <br>
 Step 3 : install dependencies : `npm install` <br>
-Step 4 : create a `creds.json` file in the `src/config/` folder (`touch src/config/creds.json`) and paste these contents : 
-```json
-{
-  "token": ""
-}
+Step 4 : create a `.env` at the root of the project and paste these contents : 
+```bash
+TOKEN=<bot-token-here>
+CLIENT_ID=<bot-id-here>
+GUILD_ID=<server-id-here>
 ```
-Step 5 : paste your discord bot token in the `creds.json` file
 
 ## Configuration
 There are a few setting you can change in the `config.json` file :
@@ -27,11 +26,8 @@ There are a few setting you can change in the `config.json` file :
   <li>trigger : the name of the channel that will act as the trigger for creating a temporary VC</li>
 </ul>
 
-## Debugging
-From the root of the project, run `npm run dev`.
-
-## Building for production
-From the root of the project, run `npm run build`.
+## Warning
+Since discord.js version 13 it is possible to register slash (/) commands. The process to do so is a bit unique as in it requires the file `deploy-commands.js` to be run before the bot starts (`node deploy-commands.js`).
 
 ## Requirements
 This bot was written with [Node.js](https://nodejs.org/) version 16.8.0 using [discord.js](https://discord.js.org/) version 13.1.0
