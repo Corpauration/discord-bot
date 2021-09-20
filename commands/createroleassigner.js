@@ -2,8 +2,8 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('ping')
-		.setDescription('Test if the bot is working correctly.'),
+		.setName('createroleassigner')
+		.setDescription('[Requires admin privileges] Create a role selector.'),
 	async execute(interaction) {
 		await interaction.reply('Pong!');
 	},
