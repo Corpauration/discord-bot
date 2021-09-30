@@ -5,11 +5,6 @@
  */
 exports.log_to_console = (message) => {
   let current_date = new Date();
-  let datetime = '[' + current_date.getDate() + '/'
-    + (current_date.getMonth() + 1) + '/'
-    + current_date.getFullYear() + ' @ '
-    + current_date.getHours() + ':'
-    + current_date.getMinutes() + ':'
-    + current_date.getSeconds() + '] ';
+  let datetime = ('['+current_date.toLocaleString('fr')+'] ').replace(',', ' @')
   console.log(datetime.toString() + message);
 }
