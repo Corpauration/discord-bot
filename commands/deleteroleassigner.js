@@ -1,8 +1,8 @@
-const { SlashCommandBuilder } = require('@discordjs/builders');
-const { data_name } = require('../config.json');
+const {SlashCommandBuilder} = require('@discordjs/builders');
+const {data_name} = require('../config.json');
 const fs = require('fs');
 const utils = require('../utils');
-const { Permissions } = require('discord.js');
+const {Permissions} = require('discord.js');
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -40,20 +40,20 @@ module.exports = {
 										ephemeral: true
 									});
 								} else {
-									await interaction.reply({content: 'The role assigner have been deleted', ephemeral: true});
-									utils.log_to_console('Succefully deleteroleassigner {channel:' + optionChannel.id + ' message:' + optionMessage.id + '}');
+									await interaction.reply({content: 'The role assigner has been deleted.', ephemeral: true});
+									utils.log_to_console('Successfully removed a role assigner | {channel:' + optionChannel.id + ' message:' + optionMessage.id + '}');
 								}
 							});
 						}
 					});
 				} else {
-					await interaction.reply({content: 'Error this message id is not valid', ephemeral: true});
+					await interaction.reply({content: 'Error : invalid message id.', ephemeral: true});
 				}
 			} else {
-				await interaction.reply({content: 'Error this channel name is not valid', ephemeral: true});
+				await interaction.reply({content: 'Error : invalid channel name.', ephemeral: true});
 			}
 		} else {
-			await interaction.reply({content: 'You don\'t have access to this command', ephemeral: true});
+			await interaction.reply({content: 'You don\'t have access to this command.', ephemeral: true});
 		}
 	},
 };

@@ -1,4 +1,4 @@
-const { data_name } = require('../config.json');
+const {data_name} = require('../config.json');
 const fs = require('fs');
 const utils = require('../utils');
 
@@ -13,11 +13,11 @@ module.exports = {
 				console.log(err);
 			} else {
 				const json = JSON.parse(dataJson);
-				Object.keys(json).forEach(async element => {
+				for (const element of Object.keys(json)) {
 					await client.channels.cache.get(element.split(':')[0]).messages.fetch(element.split(':')[1]).then(message => {
-						console.log('Successfully caching message :', message.id);
+						console.log('Retrieved from cache : ', message.id);
 					}).catch(console.error);
-				})
+				}
 			}
 		});
 	},

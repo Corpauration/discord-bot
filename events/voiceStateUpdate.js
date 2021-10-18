@@ -27,9 +27,9 @@ module.exports = {
 		}
 
 		if (
+			new_state.channel != null &&
 			new_state.channel !== undefined &&
-			new_state.channel.name === trigger &&
-			new_state.channel != null
+			new_state.channel.name === trigger
 		) {
 			const channel_name = channel_prefix + ' de ' + new_state.member.user.username;
 			new_state.guild.channels.create(channel_name, {
