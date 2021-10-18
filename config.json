@@ -1,4 +1,6 @@
 {
   "channel_prefix": "Salon temporaire",
-  "trigger": "Créer salon vocal"
+  "trigger": "Créer salon vocal",
+  "data_name": "data.json",
+  "emojis_name": "emojis.json"
 }

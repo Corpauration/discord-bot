@@ -5,6 +5,8 @@ module.exports = {
 		.setName('ping')
 		.setDescription('Test if the bot is working correctly.'),
 	async execute(interaction) {
-		await interaction.reply('Pong!');
+		if(interaction.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR)) {
+			await interaction.reply({ content: 'Pong !', ephemeral: true });
+		}
 	},
 };
