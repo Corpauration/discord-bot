@@ -26,9 +26,6 @@ There are a few setting you can change in the `config.json` file :
   <li>trigger : the name of the channel that will act as the trigger for creating a temporary VC</li>
 </ul>
 
-## Warning
-Since discord.js version 13 it is possible to register slash (/) commands. The process to do so is a bit unique as in it requires the file `deploy-commands.js` to be run before the bot starts (`node deploy-commands.js`).
-
 ## Requirements
 This bot was written with [Node.js](https://nodejs.org/) version 16.8.0 using [discord.js](https://discord.js.org/) version 13.1.0
 
