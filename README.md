@@ -29,5 +29,6 @@ There are a few setting you can change in the `config.json` file :
 ## Requirements
 This bot was written with [Node.js](https://nodejs.org/) version 16.8.0 using [discord.js](https://discord.js.org/) version 13.1.0
 
-## Author
-Lucas DRAESCHER (draescherl@cy-tech.fr)
+## Authors
+Lucas DRAESCHER (draescherl@cy-tech.fr) <br>
+Rémy Ollivier (ollivierre@cy-tech.fr)
