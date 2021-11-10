@@ -8,8 +8,8 @@ on:
   workflow_dispatch:
   
 env:
-  CLIENT_ID: 884501584476794880
-  GUILD_ID: 850788219133886565
+  CLIENT_ID: '884501584476794880'
+  GUILD_ID: '850788219133886565'
   IMAGE_NAME: corp-discord-bot-image
   CONTAINER_NAME: corp-discord-bot-container
 
