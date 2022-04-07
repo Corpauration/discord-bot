@@ -1,6 +1,10 @@
 const {data_name} = require('../config.json');
 const fs = require('fs');
 const utils = require('../utils');
+const express = require('express');
+
+const app = express();
+const port = 8080;
 
 module.exports = {
 	name: 'ready',
@@ -20,5 +24,14 @@ module.exports = {
 				}
 			}
 		});
+
+        // The app needs to be listening on port 8080 so that Clever Cloud can healthcheck
+        app.get('/', (req, res) => {
+            res.send('Bot is alive!');
+        });
+
+        app.listen(port, () => {
+            utils.log_to_console(`Webserver up on port ${port}.`);
+        });
 	},
 };

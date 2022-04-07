@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "start": "python -m http.server 8080 & node index.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "L.DRAESCHER",
@@ -16,7 +16,8 @@
     "@discordjs/rest": "^0.1.0-canary.0",
     "discord-api-types": "^0.23.1",
     "discord.js": "^13.1.0",
-    "dotenv": "^10.0.0"
+    "dotenv": "^10.0.0",
+    "express": "^4.17.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
