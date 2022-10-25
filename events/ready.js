@@ -11,6 +11,8 @@ module.exports = {
 	once: true,
 	execute(client) {
 		utils.log_to_console(`Ready ! Logged in as ${client.user.tag}`);
+        client.user.setActivity("Powered by CleverCloud!")
+
 		fs.readFile(data_name, 'utf8', async function readFileCallback(err, dataJson) {
 			if (err) {
 				utils.log_to_console(err + ' :');
